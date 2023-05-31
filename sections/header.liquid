@@ -244,7 +244,16 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-
+    
+    <form action="{{ routes.search_url }}">
+      <input type="text"
+        placeholder="Search"
+        name="q"
+        value="{{ search.terms | escape }}"
+     >
+      <input type="submit" value="Search">
+    </form>
+    
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header__localization{% endif %}">
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}

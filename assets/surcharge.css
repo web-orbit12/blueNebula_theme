@@ -1,0 +1,5 @@
+@media screen and (min-width: 990px){
+.header--middle-left {
+    grid-template-columns: auto auto auto auto !important;
+}   
+}
