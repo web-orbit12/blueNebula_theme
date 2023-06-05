@@ -25,6 +25,24 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "6bf3aeb9-d90d-428c-bda5-f0119ed617d0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Everlast_Rouge_99e25b73-0d6f-4adb-a0be-11accd8a6f36.jpg"
+          }
+        },
+        "ca984746-8d26-416c-b4aa-8c30a21874b0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Reebok_bleu.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "6bf3aeb9-d90d-428c-bda5-f0119ed617d0",
+        "ca984746-8d26-416c-b4aa-8c30a21874b0"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "menu-dragonbleu",

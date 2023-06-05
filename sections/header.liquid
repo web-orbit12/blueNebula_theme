@@ -702,7 +702,34 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
+{% comment %}
+{% assign imageCount = 0 %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'image' %}
+            {% if block.settings.image %}
+              {% assign imageCount = imageCount | plus: 1 %}
+              {% if imageCount == 2 %}
+                <div class="slide" {{ block.shopify_attributes }}>
+                    {{ block.settings.image | image_url: width: 248 | image_tag }}
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endcase %}
+      {% endfor %}
+{%  endcomment %}
